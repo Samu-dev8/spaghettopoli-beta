@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rancho&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 25.5px;
+  font-family: 'Rancho', cursive;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  animation: transitionIn 0.7s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-10deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+header {
+  width: 100%;
+  height: 50px;
+    opacity: 0.75;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Logo {
+  color: rgb(44, 44, 44);
+  font-size: 1.5em;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav ol {
+  display: flex;
+  list-style: none;
+}
+
+nav ol li {
+  margin: 1em;
+}
+
+nav ol li a {
+  text-decoration: none;
+  padding: 0.2em 1.2em 0.9em 1.2em;
+  border-radius: 10px 10px 0 0;
+  color: rgb(39, 39, 39);
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+nav ol li a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 41px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(90deg, rgba(156,27,36,1) 0%, rgba(133,21,29,1) 25%);
+  transform-origin: bottom;
+  transform: scaleY(0.05);
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+nav ol li a:hover::before {
+  transform: scaleY(1.1);
+}
+
+nav ol li a:hover {
+  color: white;
+}
+
+.btn {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  appearance: none;
+  cursor: pointer;
+  display: none;
+}
+
+.btn::before {
+  content: '\f0c9';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+@media (max-width: 1200px) {
+  .btn {
+    display: flex;
+    z-index: 100;
+  }
+
+  header {
+    justify-content: space-between;
+    padding: 0 2em;
+  }
+
+  .nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: all 0.4s;
+  }
+
+  input:checked ~ .nav {
+    transform: translateY(0%);
+  }
+}
+
+input:checked::before {
+  content: '\f00d';
+}
+
+@media (max-width: 700px) {
+  .nav ol {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.menu {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 22px 40px;
+}
+
+.heading {
+  background-color: #cb202d;
+  color: #ffffff;
+  margin-bottom: 30px;
+  padding: 120px 0 30px 0;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+
+.heading2 {
+  background-color: #cb202d;
+  color: #ffffff;
+  margin-bottom: 10px;
+  padding: 120px 0 10px 0;
+  grid-column: 1/-1;
+  text-align: center;
+}
+
+.heading>h1 {
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.heading>h3 {
+  font-weight: 600;
+  font-size: 22px;
+  font-family: 'Rancho', cursive;
+  letter-spacing: 3px;
+}
+
+.food-items {
+  display: grid;
+  position: relative;
+  grid-template-rows: auto 1fr;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+}
+
+.food-items img {
+  position: relative;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.details {
+  padding: 20px 10px;
+  display: grid;
+  grid-template-rows: auto 1fr 50px;
+  grid-row-gap: 15px;
+}
+
+.details-sub {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.details-sub>h5 {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.price {
+  text-align: right;
+}
+
+.details>p {
+  color: #6f6f6f;
+  font-size: 15px;
+  line-height: 28px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  align-self: stretch;
+}
+
