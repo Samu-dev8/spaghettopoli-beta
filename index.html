@@ -6,7 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rancho&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
   <title>Spaghettopoli</title>
 </head>
 <body>
@@ -25,7 +25,14 @@
     </ul>
     </div>
 </nav>
-<script type="text/javascript" src="js/script.js"></script>
+<script>
+  const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+</script>
   <div class="menu">
         <div class="heading">
             <h1><B>MENU'</B></h1>
