@@ -22,17 +22,17 @@ body, html {
   }
 }
 
-.navbar{
+.navbar {
   display: flex;
-  justify-content: spacce-between;
+  justify-content: space-between;
   align-items: center;
   background-color: #333;
-  color: white; 
+  color: white;
 }
 
-.brand-title{
+.brand-title {
   font-size: 1.5rem;
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 .navbar-links ul {
@@ -41,7 +41,7 @@ body, html {
   display: flex;
 }
 
-.navbar-links li{
+.navbar-links li {
   list-style: none;
 }
 
@@ -58,7 +58,7 @@ body, html {
 
 .toggle-button {
   position: absolute;
-  top: .75rem;
+  top: 0.75rem;
   right: 1rem;
   display: flex;
   flex-direction: column;
@@ -75,11 +75,11 @@ body, html {
 }
 
 @media (max-width: 400px) {
-  .toggle-button{
+  .toggle-button {
     display: flex;
   }
-  
-  .navbar-links{
+
+  .navbar-links {
     width: 100%;
     display: none;
   }
@@ -99,7 +99,7 @@ body, html {
   }
 
   .navbar-links li a {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
   }
 
   .navbar-links.active {
@@ -123,14 +123,14 @@ body, html {
   text-align: center;
 }
 
-.heading>h1 {
+.heading > h1 {
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   margin-bottom: 10px;
 }
 
-.heading>h3 {
+.heading > h3 {
   font-weight: 600;
   font-size: 22px;
   font-family: 'Rancho', cursive;
@@ -164,7 +164,7 @@ body, html {
   grid-template-columns: auto auto;
 }
 
-.details-sub>h5 {
+.details-sub > h5 {
   font-weight: 600;
   font-size: 18px;
 }
@@ -173,7 +173,7 @@ body, html {
   text-align: right;
 }
 
-.details>p {
+.details > p {
   color: #6f6f6f;
   font-size: 15px;
   line-height: 28px;
@@ -181,188 +181,3 @@ body, html {
   font-weight: 400;
   align-self: stretch;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rancho&display=swap');
-
-* {
-  box-sizing: border-box;
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  animation: transitionIn 0.7s;
-}
-
-@keyframes transitionIn {
-  from {
-    opacity: 0;
-    transform: rotateX(-10deg);
-  }
-  to {
-    opacity: 1;
-    transform: rotateX(0);
-  }
-}
-
-.navbar{
-  display: flex;
-  justify-content: spacce-between;
-  align-items: center;
-  background-color: #333;
-  color: white; 
-}
-
-.brand-title{
-  font-size: 1.5rem;
-  margin: .5rem;
-}
-
-.navbar-links ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar-links li{
-  list-style: none;
-}
-
-.navbar-links li a {
-  text-decoration: none;
-  color: white;
-  padding: 1rem;
-  display: block;
-}
-
-.navbar-links li:hover {
-  background-color: #555;
-}
-
-.toggle-button {
-  position: absolute;
-  top: .75rem;
-  right: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.toggle-button .bar {
-  height: 3px;
-  width: 100%;
-  background-color: white;
-  border-radius: 10px;
-}
-
-@media (max-width: 400px) {
-  .toggle-button{
-    display: flex;
-  }
-  
-  .navbar-links{
-    width: 100%;
-    display: none;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navbar-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .navbar-links li {
-    text-align: center;
-  }
-
-  .navbar-links li a {
-    padding: .5rem 1rem;
-  }
-
-  .navbar-links.active {
-    display: flex;
-  }
-}
-
-.menu {
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 22px 40px;
-}
-
-.heading {
-  background-color: #cb202d;
-  color: #ffffff;
-  margin-bottom: 30px;
-  padding: 120px 0 30px 0;
-  grid-column: 1/-1;
-  text-align: center;
-}
-
-.heading>h1 {
-  font-weight: 400;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.heading>h3 {
-  font-weight: 600;
-  font-size: 22px;
-  font-family: 'Rancho', cursive;
-  letter-spacing: 3px;
-}
-
-.food-items {
-  display: grid;
-  position: relative;
-  grid-template-rows: auto 1fr;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  margin: 0 20px;
-}
-
-.food-items img {
-  position: relative;
-  width: 100%;
-  border-radius: 15px 15px 0 0;
-}
-
-.details {
-  padding: 20px 10px;
-  display: grid;
-  grid-template-rows: auto 1fr 50px;
-  grid-row-gap: 15px;
-}
-
-.details-sub {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-
-.details-sub>h5 {
-  font-weight: 600;
-  font-size: 18px;
-}
-
-.price {
-  text-align: right;
-}
-
-.details>p {
-  color: #6f6f6f;
-  font-size: 15px;
-  line-height: 28px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  align-self: stretch;
-}
-
