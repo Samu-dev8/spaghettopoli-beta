@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rancho&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Rancho&display=swap');
 
 * {
   box-sizing: border-box;
@@ -9,6 +9,10 @@ body, html {
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   animation: transitionIn 0.7s;
+}
+
+.brand-title{
+  font-family: 'Rancho', cursive;
 }
 
 @keyframes transitionIn {
@@ -111,7 +115,7 @@ body, html {
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-gap: 22px 40px;
+  grid-gap: 40px 15px;
 }
 
 .heading {
@@ -165,12 +169,13 @@ body, html {
 }
 
 .details-sub > h5 {
-  font-weight: 600;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .price {
   text-align: right;
+  font-weight: bold;
 }
 
 .details > p {
