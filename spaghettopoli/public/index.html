@@ -1,50 +1,148 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="W Spaghettopoli" />
-  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-  <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rancho&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <title>Spaghettopoli.it</title>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <nav class="navbar">
+    <div class="brand-title"><b>Spaghettopoli.it</b></div>
+    <!--<a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>-->
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Prenota</a></li>
+      </ul>
+    </div>
+  </nav>
+  <script>
+    const toggleButton = document.querySelector('.toggle-button');
+    const navbarLinks = document.querySelector('.navbar-links');
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
+  </script>
+  <div class="menu">
+    <div class="heading">
+      <h1><b>MENU</b></h1>
+      <h3><i>&mdash; spaghetti &mdash;</i></h3>
+    </div>
+    <div class="food-items">
+      <img src="burger.jpg" alt="Burger">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Aglio, Olio &amp; Peperoncino</h5>
+          <h5 class="price">€4</h5>
+        </div>
+        <p>Aglio fragrante, olio d'oliva pregiato e un tocco di peperoncino piccante.</p>
+      </div>
+    </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
+    <div class="food-items">
+      <img src="chicken.jpeg" alt="Chicken">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Amatriciana</h5>
+          <h5 class="price">€5.50</h5>
+        </div>
+        <p>Polpa di pomodoro, guanciale originale Salvatori di Norcia (già trattato con pepe nero), olio d'oliva, poco
+          peperoncino, sale.</p>
+      </div>
+    </div>
 
+    <div class="food-items">
+      <img src="soup.jpeg" alt="Soup">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Barrociaia</h5>
+          <h5 class="price">€4</h5>
+        </div>
+        <p>Aglio, prezzemolo, basilico, leggero accenno di peperoncino e salsa di pomodoro.</p>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="spaghetti.jpeg" alt="Spaghetti">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Burro &amp; Salvia</h5>
+          <h5 class="price">€4</h5>
+        </div>
+        <p>Burro e salvia. Un armoniosa combinazione di sapori e aromi inconfondibile.</p>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="salmon.jpeg" alt="Salmon">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Funghi Porcini</h5>
+          <h5 class="price">€5.50</h5>
+        </div>
+        <p>Olio, cipolla, prezzemolo, polpa di pomodoro, poco peperoncino, sale e porcini piemontesi di prima scelta
+          (selezionati da Funghitaly™).</p>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="sandwich.jpeg" alt="Sandwich">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Gamberetti &amp; Zucchine</h5>
+          <h5 class="price">€5.50</h5>
+        </div>
+        <p>Vellutata crema di Zucchine fresca, gamberetti cotti al vapore, olio d'oliva, pepe e sale.</p>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="sandwich.jpeg" alt="Sandwich">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Pesto</h5>
+          <h5 class="price">€4</h5>
+        </div>
+        <p>Pesto Genovese artigianale di basilico fresco da Pestone di Albenga, Fiore Sardo DOP prodotto con latte di
+          pecora sarda, aglio, pinoli, sale e una sfumatura leggera di olio d'oliva Ligure.</p>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="sandwich.jpeg" alt="Sandwich">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Pomodoro</h5>
+          <h5 class="price">€4</h5>
+        </div>
+        <p>Pomodoro, olio di oliva, aglio, baslico, sale. Un classico della nostra cucina!</p>
+      </div>
+    </div>
+
+    <div class="food-items">
+      <img src="sandwich.jpeg" alt="Sandwich">
+      <div class="details">
+        <div class="details-sub">
+          <h5>Ragu'</h5>
+          <h5 class="price">€5</h5>
+        </div>
+        <p>Carne bovina e suina di classe (macelleria Peretti), polpa di pomodoro, vino rosso, un pizzico di aglio,
+          cipolla, rosmarino, basilico, carote, sedano, olio d'oliva e sale.</p>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>
