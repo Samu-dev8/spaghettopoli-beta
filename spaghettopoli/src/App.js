@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 
 const products = [
@@ -15,7 +14,7 @@ export default function App() {
       <div class="card-body">
         <h5 class="card-title">{product.title}</h5>
         <p class="card-text">{product.desc}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="https://google.com/" class="btn btn-primary">Go somewhere</a>
       </div>
     </div>
 
